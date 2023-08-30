@@ -2,6 +2,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="student" class="de.telran.pojo.homework.Student" scope="prototype"/>
+<bean id="student" class="de.telran.pojo.homework.Student" scope="prototype"/>
+
+    <!-- Бин для класса Order -->
+    <bean id="orderBean" class="de.telran.pojo.homework.task1.Order">
+        <property name="item" value="Product A"/>
+        <property name="price" value="100.0"/>
+    </bean>
+
+    <!-- Бин для класса PaymentGateway -->
+    <bean id="paymentGatewayBean" class="de.telran.pojo.homework.task1.PaymentGateway"/>
 
 </beans>
